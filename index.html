@@ -1,0 +1,105 @@
+<!DOCTYPE html>             <!-- Declare that this an HTML5 document. -->
+<html lang="en">            <!-- Declare the content language. -->
+<head>
+    <meta charset="utf-8">  <!-- Declare the document's character set. -->
+    <title>Runny Game</title>   <!-- Set the page title.  Will be displayed at the top of the browser window and in bookmarks.  -->
+    <link rel="stylesheet" href="index.css">    <!-- Include styles from index.css. -->
+</head>
+  <body>
+
+        <aside>
+         <button onclick="pauseThemeSong()">Pause</button>
+         <button onclick="playThemeSong()">Play</button>
+         <button onclick="resetDB()">Reset DB</button>
+        </aside>
+        <aside2>
+          <h1>ABILITIES</h2>
+          <span id= ability1></span><span id= ability1Status></span>
+          <br>
+          <span id= ability2></span><span id= ability2Status></span>
+          <br>
+          <span id= ability3></span><span id= ability3Status></span>
+
+        </aside2>
+        <aside3>
+          <button id= healthBar class="button health">HEALTH</button>
+          <span class="money">MONEY: </span><span id= moneyBar class="money"></span>
+          <div id="board"></div>
+        </aside3>
+        <main>
+        <div id= characterSelector>
+        <h1 id= apple>CHOOSE YOUR CHARACTER.</h1>
+        <button class="button adlani" onclick="chooseAdlani()" onmouseenter="adlaniHover()">Biggy Cheese</button>
+        <button class="button noah" onclick="chooseNoah()" onmouseenter="noahHover()">Dench</button>
+        <button class="button joey" onclick="chooseJoey()" onmouseenter="joeyHover()">Bizmo Funions</button>
+        <br>
+        <button class="button diego" onclick="chooseDiego()" onmouseenter="diegoHover()">Mr. Muggle</button>
+        <button class="button jon" onclick="chooseJon()" onmouseenter="jonHover()">Icky Thump</button>
+        <button class="button carlo" onclick="chooseCarlo()" onmouseenter="carloHover()">Uncle Ub</button>
+        <br>
+        <br>
+        <div class= characterDescription>
+        <span>Character's specialty is: </span>
+        <span id= characterSpecialty></span>
+        <br>
+        <span>Character's weakness is: </span>
+        <span id= characterWeakness></span>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        </div>
+        <div id= title class= turdface>
+        </div>
+        <span id= banana></span>
+        <br>
+        <button onclick="getExperience()" class="killEnemiesButton">kill some enemies</button>
+        <button onclick="yourLootAlert()" class="yourLootButton">your loot</button>
+        <table style="width:20%">
+             <tr>
+              <th>STRENGTH</th>
+              <td id= yourStrength></td>
+             </tr>
+             <tr>
+              <th>AGILITY</th>
+              <td id= yourAgility></td>
+             </tr>
+             <tr>
+              <th>INTELLECT</th>
+              <td id= yourIntellect></td>
+             </tr>
+             <tr>
+              <th>VITALITY</th>
+              <td id= yourVitality></td>
+             </tr>
+             <tr>
+              <th>CHARISMA</th>
+              <td id= yourCharisma></td>
+             </tr>
+        </table>
+        <br>
+
+
+      </main>
+
+
+
+        <br>
+        <br>
+        <br>
+
+            <script src="https://www.gstatic.com/firebasejs/4.10.1/firebase-app.js"></script>
+            <script src="https://www.gstatic.com/firebasejs/4.10.1/firebase-auth.js"></script>
+            <script src="https://www.gstatic.com/firebasejs/4.10.1/firebase-database.js"></script>
+            <script src="https://www.gstatic.com/firebasejs/4.10.1/firebase-firestore.js"></script>
+            <script src="https://www.gstatic.com/firebasejs/4.10.1/firebase-messaging.js"></script>
+
+        <script type="text/javascript" src="index.js"></script>
+
+  </body>
+
+</html>
